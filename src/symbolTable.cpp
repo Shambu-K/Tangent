@@ -43,8 +43,10 @@ SymbolTable::SymbolTable(SymbolTable* parent, std::string _namespace_name, bool 
 	}
 	if(append && namespace_name != "") 
 		namespace_name = parent->getNamespaceName() + "::" + namespace_name;
-	if(namespace_name == "")
-		namespace_name = parent->getNamespaceName() + "::" + std::to_string(child_symbol_tables.size());
+	if(namespace_name == ""){
+		int table_num = (parent == NULL) ? 0 : parent->child_symbol_tables.size();
+		namespace_name = parent->getNamespaceName() + "::" + std::to_string(table_num);
+	}
 	
 	if(parent != NULL)
 		parent->child_symbol_tables[namespace_name] = this;
