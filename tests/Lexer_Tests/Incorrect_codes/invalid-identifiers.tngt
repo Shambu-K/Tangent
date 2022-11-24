@@ -1,0 +1,9 @@
+#lexer-test for use of invalid identifier names
+
+driver<: :>
+(:
+    var int 2rio := 3;      #name should not start with a number
+    var float $dollar := 12.5;  #special characters are not allowed;
+    var string @pple* := "apple";
+
+:)

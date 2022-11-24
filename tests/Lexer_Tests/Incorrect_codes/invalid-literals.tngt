@@ -1,0 +1,9 @@
+#lexer test for use of invalid literal values
+
+driver<: :>
+(:
+    var int a := 12_2;  #special characters not allowed inside the literal
+    var float b := 2@2;
+    var string c := "invalid string literal""; # double quotes left open
+
+:)

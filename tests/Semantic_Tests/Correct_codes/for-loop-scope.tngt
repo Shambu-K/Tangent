@@ -1,0 +1,22 @@
+
+
+driver<: :>
+(:
+    var int suma_i := 0;
+    for(var int i := 1; i <= 10; i++)
+    (:
+        var int ai := i*2;
+        suma_i += ai;
+        for(var int j := 1; j <= 10; j++)
+        (:
+            var int sum_ans := i+j;
+            var int sum_product := i*j;
+            print(sum_ans);
+            print(sum_product);
+        :)
+    :)
+
+    print(suma_i);
+
+    
+:)

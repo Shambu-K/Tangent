@@ -35,9 +35,13 @@ driver<: :>
 
     else
     (:
-        var int a2 := a+10;
-        var int b2 := b/6;
+        var int a2 := a+6;
+        var int b2 := b+9;
+
+        ans := a2+b2;
     :)
+
+    
 
     print(ans);
 

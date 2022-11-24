@@ -1,0 +1,9 @@
+#reserverd keywords used as variable names
+
+driver<: :>
+(:
+    var int float := 12;
+    var float string := 24.5;
+    print(float);
+    print (string);
+:)
