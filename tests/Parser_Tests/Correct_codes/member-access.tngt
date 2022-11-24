@@ -1,0 +1,25 @@
+#parser test for using inheritance
+
+family Vehicle
+(:
+        Vehicle <: int wheels :>
+        (:
+            var int dimensions;
+        :)
+        public var int wheels;
+        public var int plate_no;
+        private var Colour col;
+    
+:);
+
+family User
+(:
+        private var string name;
+        private var int id;
+        private var Vehicle car, scooter;
+:);
+
+driver<: :>
+(:
+    var User user1;
+:)

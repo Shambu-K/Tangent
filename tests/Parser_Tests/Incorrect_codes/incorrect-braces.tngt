@@ -1,6 +1,0 @@
-#braces not closed
-
-driver<: :>
-(:
-    var int n := 5;
-    print(n);

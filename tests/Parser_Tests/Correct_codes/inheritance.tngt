@@ -1,0 +1,29 @@
+#parser test to check use of inheritance
+
+family Vehicle
+(:
+    Vehicle <: int wheeels :>
+    (:
+        var int dimensions;
+    :)
+    public var int wheels;
+    public var int plate_no;
+    public var Colour col;
+
+:);
+
+family Specs::public Vehicle
+(:
+    Specs <: float max_speed :>
+    (:
+        var int size;
+    :)
+    public var float max_speed;
+    public var float mileage;
+    private var int engine_count;
+:);
+
+driver<: :>
+(:
+    var Specs car;
+:)

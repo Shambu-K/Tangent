@@ -34,7 +34,7 @@ parser: $(BUILD_DIR)/parser.cc $(BUILD_DIR)/lex.yy.cc $(SRC_DIR)/astNodes.cpp $(
 
 # Build an executable to parse the input tangent code files according to the grammar rules and perform semantic analysis
 parser_with_semantic_analysis: $(BUILD_DIR)/parser.cc $(BUILD_DIR)/lex.yy.cc $(SRC_DIR)/astNodes.cpp $(SRC_DIR)/symbolTable.cpp
-	$(CC) -std=c++2a -o $(BUILD_DIR)/$@ $^ $(LLVM_INC_DIR:%=-I%) -D SYMBOL_TABLE_DEBUG -D AST_DEBUG -D SEMANTIC_ERROR_DEBUG
+	$(CC) -std=c++2a -o $(BUILD_DIR)/$@ $^ $(LLVM_INC_DIR:%=-I%) -D SYMBOL_TABLE_DEBUG -D AST_DEBUG -D SEMANTIC_ERROR_DEBUG -D INBUILT_SYMBOLS_DISPLAY
 
 # Generate HTML documentation describing our grammar and the DFA representing the parser.
 parser_documentation: $(SRC_DIR)/parser.yy
