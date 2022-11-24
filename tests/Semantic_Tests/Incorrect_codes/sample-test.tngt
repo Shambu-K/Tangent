@@ -1,0 +1,11 @@
+# Simple code
+
+driver<: :>
+(:
+    var string n := "code";
+    var int x := 10;
+    var string a1 := n/n;
+    var string a2 := x*n;
+    print(a1);
+    print(a2);
+:)

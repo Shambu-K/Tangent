@@ -1,0 +1,29 @@
+#using functions
+
+void digitCount<: var int n :>
+(:
+    var int count := 0;
+    while(n>0)
+    (:
+        count := count + 1;
+    :)
+    print(count + "\n");
+:)
+
+void checkOddEve<: var int n :>
+(:
+    if(n % 2 = 0)
+    (:
+        print(n + "is even\n");
+    :)
+    else
+    (:
+        print(n + " is odd \n");
+    :)
+:)
+
+driver<: :>
+(:
+    var int n := 16;
+    digitCount(n);
+:)
