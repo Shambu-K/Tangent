@@ -1,9 +1,0 @@
-#incorrect use of for loop
-
-driver<: :>
-(:
-    for(i < 100; var int i := 5; i := i + 2)
-    (:
-        print(i);
-    :)
-:)
