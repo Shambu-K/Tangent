@@ -1,0 +1,8 @@
+#semantic test for use of invalid type
+
+driver<: :>
+(:
+    var Maruti suzuki; #here Maruti is not a valid typename
+    var int val;
+    var val ans; #here val can't be used as a type name
+:)

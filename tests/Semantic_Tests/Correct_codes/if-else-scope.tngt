@@ -24,12 +24,12 @@ driver<: :>
 
         else
         (:
-            var int a1_3 := a/2;
-            var int a1_4 := a/2;
-            var int b1_3 := b/2;
-            var int b1_4 := b/2;
+            var int a1_1 := a/2;
+            var int a1_2 := a/2;
+            var int b1_1 := b/2;
+            var int b1_2 := b/2;
 
-            ans := a1_3+a1_4+b1_3+b1_4;
+            ans := a1_1+a1_2+b1_1+b1_2;
         :)
     :)
 
