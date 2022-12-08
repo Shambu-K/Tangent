@@ -99,6 +99,32 @@ semn_incorrect_codes_test(){
 	SHOULD_FAIL=1
 }
 
+correct_testcase_demo(){
+	TESTS_DIR+="Final_Demo/Correct_codes"
+	EXE="${BUILD_DIR}/parser_debug"
+	OUTPUT_FILE_EXTENSION=".parser-trace"
+
+	BEGIN_TESTS_MSG="Running non-trivial correct tangent example"
+	ALL_TESTS_SUCCESSFUL_MSG="Testcase Successful!"
+	TESTS_FAILED_MSG="Semantic analysis testcases failed!"
+
+	EXPECTED_ERROR_MSG="Error:"
+	SHOULD_FAIL=0
+}
+
+incorrect_testcase_demo(){
+	TESTS_DIR+="Final_Demo/Incorrect_codes"
+	EXE="${BUILD_DIR}/parser_debug"
+	OUTPUT_FILE_EXTENSION=".parser-trace"
+
+	BEGIN_TESTS_MSG="Running non-trivial incorrect tangent example"
+	ALL_TESTS_SUCCESSFUL_MSG="Testcase Successful! All errors were caught by the compiler!"
+	TESTS_FAILED_MSG="Semantic analysis testcases failed!"
+
+	EXPECTED_ERROR_MSG="Error:"
+	SHOULD_FAIL=1
+}
+
 # Call the appropriate test function
 "$1"
 

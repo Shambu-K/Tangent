@@ -1,0 +1,123 @@
+# Global Function
+void digitCount<: var int n :>
+(:
+    var int count := 0;
+    while(n>0)
+    (:
+        count := count + 1;
+		n--;
+    :)
+    print(count);
+:)
+
+
+#using Classes
+
+family Vehicle
+(:
+	public var int wheels;
+	public var int windows;
+	public var string name;
+	
+	private var string color;
+
+	public void vehicleInfo<: :>
+	(:
+		print("Vehicle:- " + name + "\n");
+		print("Color:- " + color + "\n");
+		print("No. of wheels:- ");
+		print(wheels);
+		print("\n");
+	:)
+
+	public float get_speed_in_kmph <: var float speed_mps :> 
+	(:
+		var float speed_kmph := speed_mps * 5.0/18.0;
+
+		send speed_kmph;
+	:)
+:);
+
+family Person
+(:
+	public var string name;
+	public var int age;
+:);
+
+family Truck :: private Vehicle
+(:
+	public var string cargo;
+	public var Person truck_driver;
+:);
+
+driver<: :>
+(:
+	# Demonstrating families 
+    var Vehicle car;
+    car>>wheels := 4;
+    car>>name := "car";
+    car>>windows := 4;
+    car>>color := "magenta";
+    car>>vehicleInfo();
+
+	var Truck truck;
+	print(truck>>truck_driver>>name);
+
+
+	# Demonstrating for loops
+
+	var int suma_i := 0;
+    for(var int i := 1; i <= 10; i++)
+    (:
+        var int ai := i*2;
+        suma_i += ai;
+        for(var int j := 1; j <= 10; j++)
+        (:
+            var int sum_ans := i+j;
+            var int sum_product := i*j;
+            print(sum_ans);
+            print(sum_product);
+        :)
+    :)
+    print(suma_i);
+
+
+	# Demonstrating if-else
+
+	var int a := 2, b := 4;
+    var int ans := 0;
+	var bool check := false;
+	
+    if(check = true)
+    (:
+        var int a1 := a+2;
+        var int b1 := b-2;
+
+        if(a > 10)
+        (:
+            var int a1_1 := a*2;
+            var int a1_2 := a*2;
+            var int b1_1 := b*2;
+            var int b1_2 := b*2;
+
+            ans += a1_1-a1_2+b1_1-b1_2;
+        :)
+
+        else
+        (:
+            var int a1_1 := a/2;
+            var int a1_2 := a/2;
+
+            ans := a1_1+a1_2;
+        :)
+    :)
+
+    else
+    (:
+        var int a2 := a+6;
+        var int b2 := b+9;
+
+        ans := a2+b2;
+    :)
+
+:)
