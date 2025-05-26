@@ -7,11 +7,3 @@ and polygons. Tangent offers the capability to carry out standard
 programming activities as well as the simplicity of charting and viewing
 two-dimensional data. Despite Tangent being an object oriented language,
 we are trying to make it simple, readable, and portable.
-
-Tangent is created as part of the Compilers II project. Contributors :
-### Aman Panwar - Project Manager
-### Pranav Nayak - Language Guru
-### Shambhu Kavir - Tester
-### Shreya Kumar - Tester
-### Taha Adeel Mohammed - System Architect
-### Vikhyat Kothmasu - System Integrator
